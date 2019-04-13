@@ -5,9 +5,10 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import static java.util.stream.Collectors.*;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
@@ -34,6 +35,9 @@ public class StreamsTest {
         );
     }
 
+    /**
+     * 找出vegetarian=true的菜品
+     */
     @Test
     public void filterTest() {
         List<Dish> vegetarianMenu = menu.stream().
@@ -41,6 +45,9 @@ public class StreamsTest {
         assertThat(vegetarianMenu.size()).isEqualTo(4);
     }
 
+    /**
+     * 列表偶数输出，不重复
+     */
     @Test
     public void distinctTest() {
         List<Integer> numbers = Arrays.asList(1, 2, 1, 3, 3, 2, 4);
@@ -66,10 +73,10 @@ public class StreamsTest {
     }
 
     /**
-     * 筛选头两个荤菜
+     * 筛选头两个荤菜  P109
      */
     @Test
-    public void exciseFirstTwoMeatsTest() {
+    public void examFirstTwoMeatsTest() {
         List<Dish> firstTwoMeats = menu.stream()
                 .filter(dish -> dish.getType() == Dish.Type.MEAT)
                 .limit(2)
@@ -80,4 +87,86 @@ public class StreamsTest {
                 .isEqualTo(Dish.Type.MEAT);
     }
 
+    /**
+     * 输出集合菜品名称长度
+     */
+    @Test
+    public void mapTest() {
+        List<Integer> nameLengthList = menu.stream()
+                .map(Dish::getName)
+                .map(String::length)
+                .collect(toList());
+        assertThat(nameLengthList).contains(4, 7, 12);
+    }
+
+    /**
+     * 把单词的字母取出，不重复
+     */
+    @Test
+    public void flatMapTest() {
+        String[] words = new String[]{"Hello", "World"};
+        List<String> uniqueCharacters = Arrays.stream(words)
+                .map(w -> w.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .collect(toList());
+        assertThat(uniqueCharacters).hasSize(7);
+    }
+
+    /**
+     * 给定一个数字列表[1,2,3,4,5]，如何返回一个由每个数的平方构成的列表呢？返回[1,4,9,16,25]
+     */
+    @Test
+    public void examNumberSqrtTest() {
+        Integer[] originNumbers = new Integer[]{1, 2, 3, 4, 5};
+        List<Integer> sqrtList = Arrays.asList(originNumbers).stream()
+                .map(i ->  i * i)
+                .collect(toList());
+        assertThat(sqrtList).contains(1, 4, 9, 16, 25);
+    }
+
+    /**
+     * 给定两个数字列表[1,2,3]和[3,4]，返回所有的数对[(1,3),(1,4),(2,3),(2,4),(3,3),(3,4)]
+     * 简单起见，可以用有两个元素的数组来代表数对
+     */
+    @Test
+    public void examNumberPairTest() {
+        Integer[] firstList = new Integer[]{1, 2, 3};
+        Integer[] secondList = new Integer[]{3, 4};
+        List<Integer[]> pairs = Arrays.asList(firstList).stream()
+                .flatMap(i -> Arrays.asList(secondList).stream()
+                .map(j -> new Integer[]{i, j}))
+                .collect(toList());
+        assertThat(pairs).hasSize(6).contains(new Integer[]{1, 3},
+                new Integer[]{1, 4},
+                new Integer[]{3, 4});
+    }
+
+    /**
+     * 扩展前例，只返回总和能被3整除的数对(2,4)和(3,3)
+     */
+    @Test
+    public void examNumberPairDivideThreeTest() {
+        List<Integer> firstList = Arrays.asList(1, 2, 3);
+        List<Integer> secondList = Arrays.asList(3, 4);
+        List<Integer[]> pairsOnlyDivideThree = firstList.stream()
+                .flatMap(i -> secondList.stream()
+                        .filter(j -> (i + j) % 3 == 0)
+                        .map(j -> new Integer[]{i, j}))
+                .collect(toList());
+        assertThat(pairsOnlyDivideThree).hasSize(2)
+                .containsOnly(new Integer[]{2, 4}, new Integer[]{3, 3});
+    }
+
+    /**
+     * FIXME 一段文字"I love java I hite 996 java hit 996"，找出top3词频
+     */
+    @Test
+    public void top3WordTest() {
+        List<String> words = Arrays.asList("I", "love", "java", "I", "hite", "996", "java", "hit", "996");
+        Map<String, Integer> wordFreqMap = words.stream()
+                .collect(groupingBy(s -> s.toString(), reducing(0, e -> 1, Integer::sum)));
+        wordFreqMap.forEach((w, c) -> System.out.println(w + ":" + c));
+
+    }
 }
