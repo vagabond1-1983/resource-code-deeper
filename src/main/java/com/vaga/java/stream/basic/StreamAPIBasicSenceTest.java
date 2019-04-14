@@ -5,7 +5,9 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -154,5 +156,15 @@ public class StreamAPIBasicSenceTest {
                 .collect(toList());
         assertThat(pairsOnlyDivideThree).hasSize(2)
                 .containsOnly(new Integer[]{2, 4}, new Integer[]{3, 3});
+    }
+
+    /**
+     * 第六章 groupby 分组，根据类型分组菜品
+     */
+    @Test
+    public void groupByTest() {
+        Map<Dish.Type, List<Dish>> groupByType = menu.stream()
+                .collect(groupingBy(Dish::getType));
+        assertThat(groupByType).hasSize(3);
     }
 }
