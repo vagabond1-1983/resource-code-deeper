@@ -5,9 +5,8 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -155,17 +154,5 @@ public class StreamAPIBasicSenceTest {
                 .collect(toList());
         assertThat(pairsOnlyDivideThree).hasSize(2)
                 .containsOnly(new Integer[]{2, 4}, new Integer[]{3, 3});
-    }
-
-    /**
-     * FIXME 一段文字"I love java I hite 996 java hit 996"，找出top3词频
-     */
-    @Test
-    public void top3WordTest() {
-        List<String> words = Arrays.asList("I", "love", "java", "I", "hite", "996", "java", "hit", "996");
-        Map<String, Integer> wordFreqMap = words.stream()
-                .collect(groupingBy(s -> s.toString(), reducing(0, e -> 1, Integer::sum)));
-        wordFreqMap.forEach((w, c) -> System.out.println(w + ":" + c));
-
     }
 }

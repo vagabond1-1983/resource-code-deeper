@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.joining;
@@ -152,6 +153,20 @@ public class examTradeTest {
     }
 
     /**
+     * 所有交易中，最高的交易额是多少
+     * 用IntStream减少装箱的操作
+     */
+    @Test
+    public void maxValueImproveTest() {
+        OptionalInt maxValue = transactions.stream()
+                .mapToInt(Transaction::getValue)
+                .max();
+        assertThat(maxValue.isPresent());
+        assertThat(maxValue.getAsInt()).isEqualTo(1000);
+    }
+
+
+    /**
      * 找到交易额最小的交易
      * 看了参考答案，对于reduce的用法还是不熟
      */
@@ -160,6 +175,5 @@ public class examTradeTest {
         Optional<Transaction> transaction = transactions.stream()
                 .reduce((t1, t2) -> t1.getValue() > t2.getValue() ? t2 : t1);
         assertThat(transaction.get()).extracting(Transaction::getValue).isEqualTo(300);
-
     }
 }
