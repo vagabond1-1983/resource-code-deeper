@@ -1,11 +1,10 @@
-package com.vaga.java.stream;
+package com.vaga.java.stream.basic;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
  * @Description Dish
- * @Author kongxiangyun
  * @Date 2019/4/3 13:32
  * @Version 1.0
  **/

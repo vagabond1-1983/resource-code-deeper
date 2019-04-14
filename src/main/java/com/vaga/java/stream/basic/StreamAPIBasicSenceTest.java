@@ -1,4 +1,4 @@
-package com.vaga.java.stream;
+package com.vaga.java.stream.basic;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -12,12 +12,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
- * @Description 流API测试
- * @Author kongxiangyun
+ * @Description 流API基础 《Java 8 实战》第四章
  * @Date 2019/4/12 18:09
  * @Version 1.0
  **/
-public class StreamsTest {
+public class StreamAPIBasicSenceTest {
     private static List<Dish> menu;
 
     @BeforeClass
