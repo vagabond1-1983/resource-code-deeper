@@ -15,6 +15,8 @@
 查找
 - reduce
 归约，对集合进行累加等计算
+- parallelStream
+并行流，进行并行化处理
 ### 集合
 ### String
 ### 多线程
