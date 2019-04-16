@@ -47,7 +47,7 @@ public class wordCountTest {
     public void streamTest() {
         WordCounter sumWordCounter = article.chars()
                 .mapToObj(c -> (char) c)
-                .reduce(new WordCounter(0, false),
+                .reduce(new WordCounter(0, true),
                         WordCounter::accumulate,
                         WordCounter::combine);
         assertThat(sumWordCounter).extracting(WordCounter::getCounter)
