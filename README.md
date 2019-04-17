@@ -15,6 +15,13 @@
 查找
 - reduce
 归约，对集合进行累加等计算
+- 实例练习
+--  [CustomerExamTest](src/main/java/com/vaga/java/stream/kata/exam/CustomerExamTest.java)
+#### CompletableFuture
+异步框架
+返回Future对象，通过get获取结果
+主要使用CompletableFuture.supplyAsync进行异步操作。
+高级用法中有thenComplete，thenApply等
 ### 集合
 ### String
 ### 多线程
