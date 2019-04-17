@@ -16,6 +16,7 @@
 - reduce
 归约，对集合进行累加等计算
 - 实例练习
+-- Refer: https://github.com/konohiroaki/java8-code-kata
 --  [CustomerExamTest](src/main/java/com/vaga/java/stream/kata/exam/CustomerExamTest.java)
 #### CompletableFuture
 异步框架
