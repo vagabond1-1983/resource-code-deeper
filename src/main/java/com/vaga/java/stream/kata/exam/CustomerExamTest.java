@@ -29,8 +29,17 @@ public class CustomerExamTest extends ClassicOnlineStore {
 
     @Before
     public void init() {
-        customerList = this.mall.getCustomerList();
         shopList = this.mall.getShopList();
+        customerList = this.mall.getCustomerList();
+        customerList.stream()
+                .flatMap(c -> c.getWantToBuy().stream())
+                .forEach(i -> {
+                    OptionalInt price = shopList.stream()
+                            .flatMap(s -> s.getItemList().stream())
+                            .filter(si -> si.equals(i))
+                            .mapToInt(Item::getPrice).findAny();
+                    i.setPrice(price.orElse(0));
+                });
     }
 
     /**
@@ -218,10 +227,24 @@ public class CustomerExamTest extends ClassicOnlineStore {
      */
     @Difficult @Test
     public void havingEnoughMoney() {
-        List<Item> onSale = null;
-        List<String> customerNameList = null;
+        List<Item> onSale = shopList.stream()
+                .flatMap(s -> s.getItemList().stream())
+                .filter(i -> customerList.stream()
+                    .flatMap(c -> c.getWantToBuy().stream())
+                    .anyMatch(ci -> ci.getName().equalsIgnoreCase(i.getName())))
+                .collect(toList());
+        List<String> customerNameList = customerList.stream()
+                .filter(c -> c.getBudget() >= c.getWantToBuy().stream()
+                        .filter(i -> onSale.contains(i))
+                        .collect(toList())
+                        .stream()
+                        .mapToInt(i -> i.getPrice() == null ? 0 : i.getPrice())
+                        .peek(System.out::println)
+                        .sum())
+                .map(Customer::getName)
+                .collect(toList());
 
-        assertThat(customerNameList).hasSize(7);
-        assertThat(customerNameList).containsExactlyInAnyOrder("Joe", "Patrick", "Chris", "Kathy", "Alice", "Andrew", "Amy");
+        assertThat(customerNameList).hasSize(6);
+        assertThat(customerNameList).containsExactlyInAnyOrder("Joe", "Patrick", "Chris", "Kathy", "Andrew", "Amy");
     }
 }

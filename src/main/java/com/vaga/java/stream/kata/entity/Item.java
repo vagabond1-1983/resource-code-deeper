@@ -1,7 +1,12 @@
 package com.vaga.java.stream.kata.entity;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import javax.xml.bind.annotation.XmlAttribute;
 
+@EqualsAndHashCode(of = {"name"})
+@ToString
 public class Item {
 
     private String name;
