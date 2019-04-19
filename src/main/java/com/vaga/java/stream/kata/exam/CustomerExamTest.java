@@ -1,7 +1,6 @@
 package com.vaga.java.stream.kata.exam;
 
-import com.vaga.java.stream.kata.annotation.Difficult;
-import com.vaga.java.stream.kata.annotation.Easy;
+import com.vaga.java.common.annotation.*;
 import com.vaga.java.stream.kata.dataset.ClassicOnlineStore;
 import com.vaga.java.stream.kata.entity.Customer;
 import com.vaga.java.stream.kata.entity.Item;

@@ -1,5 +1,6 @@
 package com.vaga.java.leetcode.arraay;
 
+import com.vaga.java.common.annotation.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -35,6 +36,7 @@ public class palindromicNumber {
         this.expected = expected;
     }
 
+    @MyAnswer @Easy
     @Test
     public void palindromicNumberTest() {
         char[] testCharList = Integer.toString(input).toCharArray();
@@ -45,6 +47,28 @@ public class palindromicNumber {
             } else {
                 actual = false;
             }
+        }
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Standard
+    @Test
+    public void palindromicNumberFromSolution2Test() {
+        boolean actual = true;
+        if (input <= 0) {
+            actual = false;
+        }
+
+        int x = input;
+        if (actual) {
+            int reversed = 0;
+            while (x > 0) {
+                int digit = x % 10;
+                reversed *= 10;
+                reversed += digit;
+                x = x / 10;
+            }
+            actual = input == reversed ? true : false;
         }
         assertThat(actual).isEqualTo(expected);
     }
