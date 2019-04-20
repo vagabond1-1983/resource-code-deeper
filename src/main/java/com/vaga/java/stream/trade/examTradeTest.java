@@ -1,7 +1,7 @@
 package com.vaga.java.stream.trade;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,9 +9,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 
 import static java.util.Comparator.comparing;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toSet;
+import static java.util.stream.Collectors.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -22,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class examTradeTest {
     private List<Transaction> transactions;
 
-    @Before
+    @BeforeClass
     public void init() {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");

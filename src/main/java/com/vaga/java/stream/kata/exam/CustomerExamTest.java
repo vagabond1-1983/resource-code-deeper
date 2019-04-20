@@ -1,12 +1,13 @@
 package com.vaga.java.stream.kata.exam;
 
-import com.vaga.java.common.annotation.*;
+import com.vaga.java.common.annotation.Difficult;
+import com.vaga.java.common.annotation.Easy;
 import com.vaga.java.stream.kata.dataset.ClassicOnlineStore;
 import com.vaga.java.stream.kata.entity.Customer;
 import com.vaga.java.stream.kata.entity.Item;
 import com.vaga.java.stream.kata.entity.Shop;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.*;
 import java.util.function.Function;
@@ -26,7 +27,7 @@ public class CustomerExamTest extends ClassicOnlineStore {
     private List<Customer> customerList;
     private List<Shop> shopList;
 
-    @Before
+    @BeforeClass
     public void init() {
         shopList = this.mall.getShopList();
         customerList = this.mall.getCustomerList();

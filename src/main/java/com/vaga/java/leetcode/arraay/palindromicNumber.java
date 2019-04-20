@@ -1,11 +1,10 @@
 package com.vaga.java.leetcode.arraay;
 
-import com.vaga.java.common.annotation.*;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
-import java.util.Arrays;
+import com.vaga.java.common.annotation.Easy;
+import com.vaga.java.common.annotation.MyAnswer;
+import com.vaga.java.common.annotation.Standard;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,29 +15,19 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @Date 2019/4/19 10:41
  * @Version 1.0
  **/
-@RunWith(Parameterized.class)
 public class palindromicNumber {
-    @Parameterized.Parameters(name = "{index}: palindromic({0})={1}")
-    public static Iterable<Object[]> dataset() {
-        return Arrays.asList(new Object[][]{
+    @DataProvider
+    public static Object[][] dataset() {
+        return new Object[][]{
                 {464, true},
                 {-464, false},
                 {453, false}
-        });
-    }
-
-    public int input;
-
-    public boolean expected;
-
-    public palindromicNumber(int input, boolean expected) {
-        this.input = input;
-        this.expected = expected;
+        };
     }
 
     @MyAnswer @Easy
     @Test
-    public void palindromicNumberTest() {
+    public void palindromicNumberTest(Integer input, boolean expected) {
         char[] testCharList = Integer.toString(input).toCharArray();
         boolean actual = true;
         for (int i = 0; i < testCharList.length; i++) {
@@ -53,7 +42,7 @@ public class palindromicNumber {
 
     @Standard
     @Test
-    public void palindromicNumberFromSolution2Test() {
+    public void palindromicNumberFromSolution2Test(Integer input, boolean expected) {
         boolean actual = true;
         if (input <= 0) {
             actual = false;

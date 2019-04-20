@@ -1,6 +1,6 @@
 package com.vaga.java.stream.basic;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

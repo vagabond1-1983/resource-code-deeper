@@ -1,7 +1,7 @@
 package com.vaga.java.stream.parallel;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class wordCountTest {
     private String article;
 
-    @Before
+    @BeforeClass
     public void init() {
         article = " Nel mezzo del cammin di nostra vita " +
                 "mi ritrovai in una selva oscura" +

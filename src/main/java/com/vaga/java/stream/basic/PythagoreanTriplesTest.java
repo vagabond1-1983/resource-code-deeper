@@ -1,6 +1,7 @@
 package com.vaga.java.stream.basic;
 
-import org.junit.Test;
+
+import org.testng.annotations.Test;
 
 import java.util.stream.IntStream;
 import java.util.stream.Stream;

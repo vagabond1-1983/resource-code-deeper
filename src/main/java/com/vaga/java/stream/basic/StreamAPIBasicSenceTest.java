@@ -1,7 +1,8 @@
 package com.vaga.java.stream.basic;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
