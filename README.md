@@ -26,7 +26,7 @@
 主要使用CompletableFuture.supplyAsync进行异步操作。
 高级用法中有thenComplete，thenApply等
 ### 集合源码
-#### HashMap 源码学习
+#### HashMap
 Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.md
 1. 初始大小：初始容量不指定为16，负载因子为0.75
 负载因子的作用是计算最大的容量tableSizeFor(capacity * float_number)
@@ -36,15 +36,21 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 4. get：链表查找和红黑树查找
 5. resize：扩容时为原本容量的两倍
 6. java 8在链表长度为8以上时，用红黑树是为了提升查找性能。因为红黑树本质是平衡二叉树(O(logn))，查找次数优于链表(O(n))
-#### ConcurrentHashMap
 #### Collections
 #### ArrayList
+非线程安全，null不能作为元素
+内部是一个Object数组
+1. 初始化：可设置capacity
+2. add：先扩容，扩大1.5倍，再增加元素
+3. remove：数组移动到前一个位置，把最后一个元素位置设置为null，待GC
+4. ensureCapacity：当需要一次插入大量元素时，用这个一次性扩容，这样就不用每次1.5倍扩容了。提升性能。
 ### String
 #### StringBuilder
 ### 多线程源码
 #### [多线程理论](src/main/java/com/vaga/java/concurrent/concurrent.md) 
 #### CompletableFuture
 #### ArrayBlockingQueue
+#### ConcurrentHashMap
 #### CountDownLatch
 #### CyclicBarrier
 ### JVM
