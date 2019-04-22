@@ -18,3 +18,11 @@ e.g. 456 否
 输出: ""
 解释: 输入不存在公共前缀。
 说明: 所有输入只包含小写字母 a-z 。
+## [242.字母异位](string/ValidAnagram.java)
+判断一个字符串是否是字母异位
+示例 1:
+输入：s="anagram",t="nagaram"
+输出：true
+示例 2:
+输入：s="rat",t="car"
+输出：false
