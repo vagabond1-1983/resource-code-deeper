@@ -26,3 +26,10 @@ e.g. 456 否
 示例 2:
 输入：s="rat",t="car"
 输出：false
+## [29.两数除法](binarySearch/DivideTwoInteger.java)
+示例 1:
+输入：dividend = 10, divisor = 3
+输出：3
+示例 2：
+输入：dividend = 7, divisor = -3
+输出：-2
