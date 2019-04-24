@@ -33,3 +33,12 @@ e.g. 456 否
 示例 2：
 输入：dividend = 7, divisor = -3
 输出：-2
+## [27.删除元素](array/RemoveElement.java)
+示例 1：
+Given nums = [3,2,2,3], val = 3
+return length = 2
+3被移除，剩下2有2个
+示例 2：
+Given nums = [0,1,2,2,3,0,4,2], val = 2
+return length = 5
+2被移除，剩下[0,1,3,0,4]
