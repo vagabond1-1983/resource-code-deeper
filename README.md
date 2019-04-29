@@ -54,6 +54,13 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 #### CountDownLatch
 #### CyclicBarrier
 ### JVM
+#### Java8内存模型
+主要分成两个部分：堆和方法区是线程共享的，程序计数器、本地方法栈、虚拟机栈是线程独享的
+对象实例都是分配在堆上。
+方法区是之前的栈，里面存放的是加载的类、常量、静态变量、即时编译器编译后的代码等数据。运行时常量池也在这里。
+程序计数器是用来指示程序运行的计数器。
+本地方法栈是虚拟机用到的Native方法服务。
+虚拟机栈是局部变量表、操作数栈、动态链接、方法出口等信息。
 ### [LeetCode](src/main/java/com/vaga/java/leetcode)
 
 
