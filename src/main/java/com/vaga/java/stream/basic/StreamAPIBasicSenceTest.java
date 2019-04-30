@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
@@ -167,5 +168,13 @@ public class StreamAPIBasicSenceTest {
         Map<Dish.Type, List<Dish>> groupByType = menu.stream()
                 .collect(groupingBy(Dish::getType));
         assertThat(groupByType).hasSize(3);
+    }
+
+    @Test
+    public void intArrayToStream() {
+        int[] a = {1, 2, 3, 54};
+        List<Integer> list = Arrays.stream(a).filter(i -> i > 3).boxed().collect(toList());
+        assertThat(list).size().isEqualTo(1);
+        assertThat(list).containsExactly(54);
     }
 }
