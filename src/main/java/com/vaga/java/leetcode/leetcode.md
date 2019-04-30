@@ -42,7 +42,7 @@ return length = 2
 Given nums = [0,1,2,2,3,0,4,2], val = 2
 return length = 5
 2被移除，剩下[0,1,3,0,4]
-## [20.有效的括号]
+## [20.有效的括号](stack/ValidParentheses.java)
 示例 1:
 输入: "()"
 输出: true
