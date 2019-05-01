@@ -71,6 +71,7 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 -- G1：采用并行线程进行标记，然后整理。
 - [GCDetails实验](src/main/java/com/vaga/java/jvm/gc/testAllocation.java)
 #### [JConsole实验](src/main/java/com/vaga/java/jvm/jconsole/MonitoringTest.java)
+#### [visualvm - btrace](src/main/java/com/vaga/java/jvm/visualvm/btrace/BTraceTest.java)
 ### [LeetCode](src/main/java/com/vaga/java/leetcode)
 
 
