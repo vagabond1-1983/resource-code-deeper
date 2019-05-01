@@ -61,6 +61,16 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 程序计数器是用来指示程序运行的计数器。
 本地方法栈是虚拟机用到的Native方法服务。
 虚拟机栈是局部变量表、操作数栈、动态链接、方法出口等信息。
+#### GC
+- GC对于内存回收基本上是三种策略：标记-清除、复制、标记-整理。
+-- 标记-清除：对堆上的对象进行是否可回收的标记，如果没有指向其的引用，则会清除。优点是方法简单执行时间较快，缺点是内存碎片产生较多。
+-- 复制：划分成两片区域，可回收空间释放后，复制有效对象到另一片空间中。优点是内存分布比较完整，缺点是需要空间占用大。
+-- 标记-整理：对堆上的对象进行标记，如果没有指向其的引用，则整理有效对象到释放的空间中。优点是内存分布完整，缺点是时间长。
+- GC一直需要解决的问题就是Stop The World，就是在清理时需要将所有线程暂停，这样对于用户体验来说是不好的。所以才有了不同的收集器。
+-- CMS：采用并行线程进行标记，然后清理
+-- G1：采用并行线程进行标记，然后整理。
+- [GCDetails实验](src/main/java/com/vaga/java/jvm/gc/testAllocation.java)
+#### [JConsole实验](src/main/java/com/vaga/java/jvm/jconsole/MonitoringTest.java)
 ### [LeetCode](src/main/java/com/vaga/java/leetcode)
 
 
