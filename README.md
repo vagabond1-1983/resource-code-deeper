@@ -72,6 +72,11 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 - [GCDetails实验](src/main/java/com/vaga/java/jvm/gc/testAllocation.java)
 #### [JConsole实验](src/main/java/com/vaga/java/jvm/jconsole/MonitoringTest.java)
 #### [visualvm - btrace](src/main/java/com/vaga/java/jvm/visualvm/btrace/BTraceTest.java)
+#### 类加载模型
+- loadClass是java定义好的，findClass可重写
+- 双亲委派机制是父类先加载类，无法加载再由子类加载。顺序：
+BootStrap ClassLoader->System ClassLoader->Application ClassLoader->User ClassLoader
+- 破坏双亲委派是为了更加灵活的自定义加载器，不再先从父类开始加载。
 ### [LeetCode](src/main/java/com/vaga/java/leetcode)
 
 
