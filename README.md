@@ -77,6 +77,10 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 - 双亲委派机制是父类先加载类，无法加载再由子类加载。顺序：
 BootStrap ClassLoader->Extension ClassLoader->Application ClassLoader->User ClassLoader
 - 破坏双亲委派是为了更加灵活的自定义加载器，不再先从父类开始加载。
+#### 并发时内存
+- volatile：防止指令重排序
+- 线程实现可分为：系统线程、用户线程和用户线程加轻量级系统进程
+- 线程状态共有五种：启动、运行、等待、阻塞、终止。启动和终止是单向的，其他都是双向的。 
 ### [LeetCode](src/main/java/com/vaga/java/leetcode)
 
 
