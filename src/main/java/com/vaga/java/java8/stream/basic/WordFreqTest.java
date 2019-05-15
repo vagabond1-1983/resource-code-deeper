@@ -1,4 +1,4 @@
-package com.vaga.java.stream.basic;
+package com.vaga.java.java8.stream.basic;
 
 import org.testng.annotations.Test;
 

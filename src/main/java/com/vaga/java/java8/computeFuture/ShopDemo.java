@@ -1,4 +1,4 @@
-package com.vaga.java.computeFuture;
+package com.vaga.java.java8.computeFuture;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;

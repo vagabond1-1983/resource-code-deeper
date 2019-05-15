@@ -1,7 +1,7 @@
-package com.vaga.java.stream.kata.dataset;
+package com.vaga.java.java8.stream.kata.dataset;
 
 
-import com.vaga.java.stream.kata.entity.OnlineShoppingMall;
+import com.vaga.java.java8.stream.kata.entity.OnlineShoppingMall;
 
 import javax.xml.bind.JAXB;
 import java.io.File;

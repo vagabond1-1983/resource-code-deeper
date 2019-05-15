@@ -1,11 +1,11 @@
-package com.vaga.java.stream.kata.exam;
+package com.vaga.java.java8.stream.kata.exam;
 
 import com.vaga.java.common.annotation.Difficult;
 import com.vaga.java.common.annotation.Easy;
-import com.vaga.java.stream.kata.dataset.ClassicOnlineStore;
-import com.vaga.java.stream.kata.entity.Customer;
-import com.vaga.java.stream.kata.entity.Item;
-import com.vaga.java.stream.kata.entity.Shop;
+import com.vaga.java.java8.stream.kata.dataset.ClassicOnlineStore;
+import com.vaga.java.java8.stream.kata.entity.Customer;
+import com.vaga.java.java8.stream.kata.entity.Item;
+import com.vaga.java.java8.stream.kata.entity.Shop;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

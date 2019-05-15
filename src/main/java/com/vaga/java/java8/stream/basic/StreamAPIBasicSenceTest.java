@@ -1,4 +1,4 @@
-package com.vaga.java.stream.basic;
+package com.vaga.java.java8.stream.basic;
 
 
 import org.testng.annotations.BeforeClass;
@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;

@@ -1,4 +1,4 @@
-package com.vaga.java.stream.trade;
+package com.vaga.java.java8.stream.trade;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.vaga.java.stream.kata.entity;
+package com.vaga.java.java8.stream.kata.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

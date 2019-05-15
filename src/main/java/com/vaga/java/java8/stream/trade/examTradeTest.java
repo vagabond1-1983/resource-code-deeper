@@ -1,4 +1,4 @@
-package com.vaga.java.stream.trade;
+package com.vaga.java.java8.stream.trade;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

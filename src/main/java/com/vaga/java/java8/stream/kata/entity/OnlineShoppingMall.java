@@ -1,4 +1,4 @@
-package com.vaga.java.stream.kata.entity;
+package com.vaga.java.java8.stream.kata.entity;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;

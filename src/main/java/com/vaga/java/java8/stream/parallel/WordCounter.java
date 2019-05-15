@@ -1,4 +1,4 @@
-package com.vaga.java.stream.parallel;
+package com.vaga.java.java8.stream.parallel;
 
 import lombok.Data;
 
