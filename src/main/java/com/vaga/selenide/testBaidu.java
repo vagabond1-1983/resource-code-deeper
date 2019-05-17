@@ -7,9 +7,9 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class testGoogle {
+public class testBaidu {
     @Test
-    public void openGoogle() throws InterruptedException {
+    public void openBaidu() throws InterruptedException {
         Configuration.browser = "Chrome";
         Configuration.baseUrl = "https://www.baidu.com";
         open("/");
