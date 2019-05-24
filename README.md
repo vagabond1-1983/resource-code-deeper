@@ -11,6 +11,9 @@
 ### 云原生
 ## 开源项目
 
+## 自动化测试
+### [selenide](src/main/java/com/vaga/selenide/selenide.md)
+
 Refer:
 [java源码分析](https://github.com/stalary/Source-code-analysis)
 [Java8 kata练习题](https://github.com/konohiroaki/java8-code-kata)
