@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
  * @Date 2019/5/26 16:14
  * @Version 1.0
  **/
-public class InsertionSort extends DataBaseTest {
+public class InsertionSort extends BaseDataTest {
     @Test(dataProvider = "random10")
     public void insertionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {

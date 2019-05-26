@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
  * @Date 2019/5/26 15:48
  * @Version 1.0
  **/
-public abstract class DataBaseTest {
+public abstract class BaseDataTest {
     private long startTime;
     @BeforeMethod
     public void recordTime() {
