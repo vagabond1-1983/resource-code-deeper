@@ -1,6 +1,7 @@
 package com.vaga.selenide;
 
 import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -13,11 +14,9 @@ public class testBaidu {
         Configuration.browser = "Chrome";
         Configuration.baseUrl = "https://www.baidu.com";
         open("/");
-        $("#kw").setValue("selenide");
+        $(By.id("kw")).setValue("selenide");
         $("#su").submit();
-        Thread.sleep(3000);
         // 断言
         $$("h3 > a").shouldHave(size(10));
-        $("h3 > a").setValue(String.valueOf(text("selenide_百度翻译")));
     }
 }
