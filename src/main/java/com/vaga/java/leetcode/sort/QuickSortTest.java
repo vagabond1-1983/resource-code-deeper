@@ -3,7 +3,7 @@ package com.vaga.java.leetcode.sort;
 import org.testng.annotations.Test;
 
 public class QuickSortTest extends BaseDataTest {
-    @Test(dataProvider = "random10")
+    @Test(dataProvider = "random10", invocationCount = 10)
     public void quickSortTest(int[] array) {
         _quickSort(array, 0, array.length -1);
         print(array);
@@ -26,21 +26,26 @@ public class QuickSortTest extends BaseDataTest {
         while (true) {
             while (left < end && array[left] <= pivot) {left++;}
 
-            while (right > start && array[right] >= pivot) {right--;}
+            if (left == end) {
+                break;
+            }
+
+            while (right >= start && array[right] >= pivot) {right--;}
 
             // left, right是否交叉
             if (left >= right) {
-                // 交叉则交换left和pivot
+                // 交叉则交换left和pivot，并退出寻找
                 int temp = array[left];
                 array[left] = pivot;
                 array[end] = temp;
+                break;
             } else {
-                // 交换left和right
+                // 交换left和right，继续比较
                 int temp = array[left];
                 array[left] = array[right];
                 array[right] = temp;
             }
-            return left;
         }
+        return left;
     }
 }
