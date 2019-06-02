@@ -1,4 +1,4 @@
-package com.vaga.java.leetcode.arraay;
+package com.vaga.java.leetcode.array;
 
 import com.vaga.java.common.annotation.Easy;
 import com.vaga.java.common.annotation.MyAnswer;

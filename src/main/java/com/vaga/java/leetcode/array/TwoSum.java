@@ -1,4 +1,4 @@
-package com.vaga.java.leetcode.arraay;
+package com.vaga.java.leetcode.array;
 
 import org.testng.annotations.Test;
 
@@ -9,6 +9,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @Description 两数之和
+ * 给定 nums = [2, 7, 11, 15], target = 9
+    因为 nums[0] + nums[1] = 2 + 7 = 9
+    所以返回 [0, 1]
  * @Date 2019/4/20 22:25
  * @Version 1.0
  **/

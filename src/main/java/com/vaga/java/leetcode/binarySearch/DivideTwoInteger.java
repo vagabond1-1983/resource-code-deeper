@@ -11,6 +11,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @Description 两数除法，不能使用除法、取模等数学符号
+ * 示例 1:
+    输入：dividend = 10, divisor = 3
+    输出：3
+    示例 2：
+    输入：dividend = 7, divisor = -3
+    输出：-2
  * @Date 2019/4/23 21:22
  * @Version 1.0
  **/

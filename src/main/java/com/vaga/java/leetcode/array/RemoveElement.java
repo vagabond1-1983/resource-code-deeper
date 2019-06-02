@@ -1,4 +1,4 @@
-package com.vaga.java.leetcode.arraay;
+package com.vaga.java.leetcode.array;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
