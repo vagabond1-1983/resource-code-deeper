@@ -32,8 +32,8 @@ public class NoDuplicateLongestSubstringLength {
     @DataProvider(name = "data")
     public static Object[][] data() {
         return new Object[][]{
-//                {"abcabcbb", 3},
-//                {"bbbbb", 1},
+                {"abcabcbb", 3},
+                {"bbbbb", 1},
                 {"pwwkew", 3}
         };
     }
@@ -57,17 +57,13 @@ public class NoDuplicateLongestSubstringLength {
      */
     private int lengthOfLongestSubstring(String s) {
         Set<Character> noDuplicateChars = new HashSet<>();
-        int res = 0;
-        for (int i = 0, j = 0; i < s.length(); i++) {
-            Character current = s.charAt(i);
-            if (!noDuplicateChars.contains(current)) {
-                // 不在Set中，则为不重复的字符
-                noDuplicateChars.add(current);
-                res = Math.max(res, noDuplicateChars.size());
+        int res = 0, i = 0, j = 0;
+        while (i < s.length() && j < s.length()) {
+            if (!noDuplicateChars.contains(s.charAt(i))) {
+                noDuplicateChars.add(s.charAt(i++));
+                res = Math.max(res, i - j);
             } else {
-                // 存在，则删除起点位置的字符
-                // j的起点滑动到后一个位置
-                noDuplicateChars.remove(j++);
+                noDuplicateChars.remove(s.charAt(j++));
             }
         }
         return res;
