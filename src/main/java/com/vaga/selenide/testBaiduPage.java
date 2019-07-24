@@ -32,7 +32,9 @@ public class testBaiduPage {
 
     /**
      * KISS模式Page Object实践
+     * https://qiita.com/tatesuke/items/0bac60172e7cfd12aeb1
      * https://github.com/yashaka/talks/tree/master/kiss-pageobjects/src/test/java/com/automician/talks/kisspageobjects/google/kiss
+     *
      */
     @Test
     public void pageObjectTest() {
