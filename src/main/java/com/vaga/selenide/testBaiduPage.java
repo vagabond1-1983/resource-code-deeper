@@ -2,8 +2,7 @@ package com.vaga.selenide;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.vaga.selenide.pageobject.Baidu;
-import com.vaga.selenide.pageobject.SearchResult;
+import com.vaga.selenide.pageobject.BaiduPage;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Selenide.*;
 
-public class testBaidu {
+public class testBaiduPage {
     @BeforeClass
     public void init() {
         // 设置chromedriver驱动路径，如果chrome不是76，则需要设置chromedriver
@@ -37,7 +36,11 @@ public class testBaidu {
      */
     @Test
     public void pageObjectTest() {
-        new Baidu().open().search("selenide");
-        new SearchResult().shouldHaveSize(10).shouldMatch(2, "虫师1");
+        BaiduPage baiduPage = open("https://www.baidu.com", BaiduPage.class);
+        baiduPage
+                .search("selenide")
+                .shouldHaveSize(10)
+                .shouldMatch(2, "虫师");
+
     }
 }
