@@ -9,3 +9,6 @@
 ## [56.合并区间](binarySearch/MergeIntervals.java)
 ## [3.无重复字符的最长子串](string/NoDuplicateLongestSubstringLength.java)
 ## [5.最长回文子串]
+## [16.最接近的三数之和](array/ThreeSumClosest.java)
+
+## [7.整数反转](num/IntegerReverse.java)
