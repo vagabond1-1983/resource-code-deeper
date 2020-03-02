@@ -74,6 +74,24 @@ public class LongestCommonPrefix {
         assertThat(actualPrefix).isEqualTo(expected);
     }
 
+    // 通过水平扫描法进行一次遍历查找
+    @Test(dataProvider = "data")
+    public void hscanForEachTest(String expected, List<String> strs) {
+        if (null == strs || strs.size() == 0) System.out.println("");
+
+        String prefix = strs.get(0);
+        for (String item : strs) {
+            while (item.indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty()) {
+                    System.out.println("");
+                    return;
+                }
+            }
+        }
+        System.out.println(prefix);
+    }
+
     /**
      * 使用二分查找找到最长前缀
      * 1. 找到最小长度的字符串 - 为获取前缀的字符串
@@ -85,6 +103,7 @@ public class LongestCommonPrefix {
      */
     @Test(dataProvider = "data")
     public void binarySearchSolutionTest(String expected, List<String> strs) {
+
         int minLength = Integer.MAX_VALUE;
         for (String s : strs) {
             minLength = Math.min(minLength, s.length());
@@ -113,4 +132,5 @@ public class LongestCommonPrefix {
         }
         return true;
     }
+
 }

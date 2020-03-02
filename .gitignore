@@ -2,6 +2,10 @@
 target/
 build/
 *.iml
+.classpath
+.factorypath
+.project
+.settings/
 
 # Compiled class file
 *.class
