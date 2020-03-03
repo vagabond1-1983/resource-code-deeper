@@ -92,6 +92,36 @@ public class ValidParentheses {
     }
 
     @Test(dataProvider = "data")
+    public void my0303Rewrite(String input, boolean expected) {
+        char[] chars = input.toCharArray();
+        Stack<Character> stack = new Stack<>();
+        for (char i : chars) {
+            if (stack.empty() || i == '(' || i == '[' || i == '{') {
+                stack.push(i);
+                break;
+            }
+
+            switch (i) {
+                case ')':
+                    if (stack.pop() != '(') assertThat(expected).isFalse();
+                    break;
+                case ']':
+                    if (stack.pop() != '[') assertThat(expected).isFalse();
+                    break;
+                case '}':
+                    if (stack.pop() != '{') assertThat(expected).isFalse();
+                    break;
+            }
+        }
+        if (stack.empty()) {
+            assertThat(expected).isTrue();
+        } else {
+            assertThat(expected).isFalse();
+        }
+
+    }
+
+    @Test(dataProvider = "data")
     public void theirSolution(String input, boolean expected) {
         Map<Character, Character> pair = Maps.newHashMap();
         pair.put(')', '(');
