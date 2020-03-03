@@ -30,7 +30,9 @@ public class strStr {
                 {"aaaaa", "bba", -1},
                 {"", "", 0},
                 {"", "a", -1},
-                {"a", "a", 0}
+                {"a", "a", 0},
+                {"mississippi", "issip", 4},
+
         };
     }
 
@@ -43,18 +45,17 @@ public class strStr {
             return  0;
         }
 
-        char[] target = haystack.toCharArray();
-        char[] compare = needle.toCharArray();
         int pos = -1;
         int j = 0;
-        for (int i = 0; i < target.length; i++) {
+        for (int i = 0; i < haystack.length(); i++) {
             // 比较字符是否一致
-            if (target[i] != compare[j]) {
+            if (haystack.charAt(i) != needle.charAt(j)) {
                 // 重置
+                i -= j;
                 j = 0;
             } else {
                 // 匹配上needle字符串，退出循环
-                if (j >= compare.length - 1) {
+                if (j >= needle.length() - 1) {
                     pos = i - j;
                     break;
                 }
