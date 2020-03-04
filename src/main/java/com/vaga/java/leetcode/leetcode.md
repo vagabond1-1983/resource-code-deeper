@@ -13,3 +13,7 @@
 
 ## [7.整数反转](num/IntegerReverse.java)
 ## [28.实现 strStr()](string/strStr.java)
+## [35.搜索插入位置]
+## [53.最大子序和]
+## [58.最后一个单词长度](string/LenOfLastWord.java)
+## [66.加一](array/PlusOne.java)
