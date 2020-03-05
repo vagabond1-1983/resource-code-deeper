@@ -22,7 +22,10 @@ StringBuffer的读写都用了synchroized修饰方法，线程安全的。String
 五：如果不是TreeNode，需要考虑节点容量是否大于7，大于7则转为红黑树后插入，不大于7则直接插入
 ### ConcurrentHashMap
 1. 线程安全 2. key和value不能是null 3. CAS和synchronize实现线程安全，也是数组+链表+红黑树
-
+## 多线程
+### 进程和线程的区别
+进程是系统资源分配的最小单位，一个进程可以有多个线程组成。进程会有单独的内存空间，最大4G。
+### [多线程进阶](../src/main/java/com/java/concurrent/concurrent.md)
 
 参考资料:
 [面试指北](http://notfound9.github.io/interviewGuide/#/)

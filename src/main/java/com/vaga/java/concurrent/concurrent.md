@@ -1,5 +1,13 @@
 # 多线程
 ## [写一个线程安全的单例](singleton)
+### volatile的作用
+防止指令重排序。volatile在修饰变量后，编译后会多出lock前缀指令。
+作用是强制线程对变量的操作立即写入到物理内存。强制其他CPU读时从物理内存获取值。
+## 实现多线程的几种方式
+1. 继承Thread，重写run方法
+2. 实现Runnable接口，重写run方法。
+但是前两个都不能设置返回值
+3. [实现Callable接口，可以有返回值](thread/CallTarget.java)
 ## synchronized
 原理是：
 当用synchronized锁住一段代码时，编译器会加入monitor，进入时是monitorenter，退出时是monitorexit。
