@@ -13,7 +13,16 @@
 
 ## [7.整数反转](num/IntegerReverse.java)
 ## [28.实现 strStr()](string/strStr.java)
+
+3.4
 ## [35.搜索插入位置]
 ## [53.最大子序和]
 ## [58.最后一个单词长度](string/LenOfLastWord.java)
 ## [66.加一](array/PlusOne.java)
+
+3.5
+## [67.二进制求和](array/BinarySum.java)
+## [70.爬楼梯]
+## [83.删除排序链表中的重复元素]
+## [88.合并两个有序数组](array/MergeSortArray.java)
+## [100. 相同的树]

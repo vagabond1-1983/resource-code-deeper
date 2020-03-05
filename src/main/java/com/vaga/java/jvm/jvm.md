@@ -1,5 +1,6 @@
 # JVM
 ## Java8内存模型
+![内存模型](https://camo.githubusercontent.com/a66819fd82c6adfa69b368edf3c52b1fa9cdc89d/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d332f4a564de8bf90e8a18ce697b6e695b0e68daee58cbae59f9f2e706e67)
 主要分成两个部分：堆和方法区是线程共享的，程序计数器、本地方法栈、虚拟机栈是线程独享的
 - 对象实例都是分配在堆上。堆可以细分为新生代和老年代。老年代(tentired)其实就是长期存在的对象，回收概率小。新生代生命周期短，一般新分配的对象在新生代。
     新生代又可分：Eden空间、From Survivor空间、To Survivor空间。

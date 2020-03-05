@@ -12,6 +12,7 @@ public class SyncSingleton implements ISingleton{
     }
 
     public static ISingleton getInstance() {
+
         if (null == singleton) {
             synchronized (SyncSingleton.class) {
                 if (null == singleton) {

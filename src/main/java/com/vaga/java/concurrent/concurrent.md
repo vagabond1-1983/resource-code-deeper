@@ -8,6 +8,7 @@
 2. 实现Runnable接口，重写run方法。
 但是前两个都不能设置返回值
 3. [实现Callable接口，可以有返回值](thread/CallTarget.java)
+## TODO 线程的生命周期和状态
 ## synchronized
 原理是：
 当用synchronized锁住一段代码时，编译器会加入monitor，进入时是monitorenter，退出时是monitorexit。
