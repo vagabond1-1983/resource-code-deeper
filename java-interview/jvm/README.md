@@ -16,9 +16,9 @@
 - GC一直需要解决的问题就是Stop The World，就是在清理时需要将所有线程暂停，这样对于用户体验来说是不好的。所以才有了不同的收集器。
 -- CMS：采用并行线程进行标记，然后清理
 -- G1：采用并行线程进行标记，然后整理。
-- [GCDetails实验](src/main/java/com/vaga/java/jvm/gc/testAllocation.java)
-## [JConsole实验](src/main/java/com/vaga/java/jvm/jconsole/MonitoringTest.java)
-## [visualvm - btrace](src/main/java/com/vaga/java/jvm/visualvm/btrace/BTraceTest.java)
+- [GCDetails实验](../../src/main/java/com/vaga/java/jvm/gc/testAllocation.java)
+## [JConsole实验](../../src/main/java/com/vaga/java/jvm/jconsole/MonitoringTest.java)
+## [visualvm - btrace](../../src/main/java/com/vaga/java/jvm/visualvm/btrace/BTraceTest.java)
 ## 类加载模型
 - loadClass是java定义好的，findClass可重写
 - 双亲委派机制是父类先加载类，无法加载再由子类加载。顺序：

@@ -16,7 +16,7 @@
 并行流，进行并行化处理
 - 实例练习
 -- Refer: https://github.com/konohiroaki/java8-code-kata
---  [CustomerExamTest](src/main/java/com/vaga/java/stream/kata/exam/CustomerExamTest.java)
+--  [CustomerExamTest](../../src/main/java/com/vaga/java/stream/kata/exam/CustomerExamTest.java)
 ## CompletableFuture
 异步框架
 返回Future对象，通过get获取结果

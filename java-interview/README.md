@@ -1,4 +1,5 @@
 # java面试
+## [leetcode](leetcode)
 ## 基础
 ### Integer的缓存值可以设置吗，怎么设置
 IntegerCache设置了一个缓存整数的数组，默认是-128 ~ 127。可以通过JVM参数java.lang.Integer.IntegerCache.high更改缓存的大小。最大不会超过Integer.MAX_VALUE - (-low) -1。
@@ -29,10 +30,14 @@ StringBuffer的读写都用了synchroized修饰方法，线程安全的。String
 七：最后判断++size是否超出阈值，也就是容量的0.75倍（默认），超出则resize，扩大一倍容量。
 ### ConcurrentHashMap
 1. 线程安全 2. key和value不能是null 3. CAS和synchronize实现线程安全，也是数组+链表+红黑树
-## 多线程
+## [多线程](concurrent)
 ### 进程和线程的区别
 进程是系统资源分配的最小单位，一个进程可以有多个线程组成。进程会有单独的内存空间，最大4G。
 ### [多线程进阶](../src/main/java/com/java/concurrent/concurrent.md)
+
+## [java8](java8)
+## [jvm](jvm)
+
 
 ## 源码编程题
 - 设计一个迭代器，包含hasNext(),next(),remove()三个方法。注意多线程问题

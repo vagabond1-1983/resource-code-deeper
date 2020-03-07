@@ -13,7 +13,7 @@ Refer: https://github.com/stalary/Source-code-analysis/blob/master/note/HashMap.
 ### Collections
 1. sort(List<T> list) -- ArrayList的排序，其实是转化为数组的排序。数组的排序：useLegacyMergeSort为true则用冒泡排序，否则用TimSort的排序
 TimSort：当数组长度小于32时，用二分法排序；当数组长度大于32，则用合并加上二分排序 -- 需要细看
-练习：[二分法排序](src/main/java/com/vaga/java/sourcecode/jdk/collections/BinarySortExecise.java)
+练习：[二分法排序](../../src/main/java/com/vaga/java/sourcecode/jdk/collections/BinarySortExecise.java)
 2. binarySearch - 二分查找
 3. min、max找最大，最小值
 ### ArrayList
@@ -28,7 +28,7 @@ TimSort：当数组长度小于32时，用二分法排序；当数组长度大�
 ## String
 ### StringBuilder
 ## 多线程源码
-### [多线程理论](src/main/java/com/vaga/java/concurrent/concurrent.md) 
+### [多线程理论](../concurrent) 
 ### synchronized
 ### CompletableFuture
 ### ArrayBlockingQueue
