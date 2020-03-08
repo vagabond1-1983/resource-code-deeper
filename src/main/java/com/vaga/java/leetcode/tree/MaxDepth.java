@@ -25,16 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  *    15   7
  * 返回它的最大深度 3 。
  */
-public class MaxDepth {
-    public class TreeNode {
-        int val;
-
-        TreeNode left;
-
-        TreeNode right;
-
-        TreeNode(int x) { val = x; }
-    }
+public class MaxDepth extends BaseTreeTest{
 
     @DataProvider(name = "data")
     public Object[][] dataset() {
