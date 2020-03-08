@@ -44,7 +44,11 @@ synchronized在1.8后进行了优化，使用轻量级锁非都是重量级锁�
 JVM有指令重排的优化。当程序是单线程时，指令重排对任务无影响。但是多线程时会出现一个线程拿到的实例并未初始化完成的情况。
 所以需要用volatile修饰共享变量。保证对象在多线程情况下的安全。
 volatile另一个作用是保证变量的可见性。
-## TODO ThreadLocal
+## ThreadLocal
+[举例](../../src/main/java/com/vaga/java/concurrent/thread/ThreadLocalExample.java)
+ThreadLocal可以保证每个线程都会有自己的本地变量，可见度只在自己的线程中。
+ThreadLocal存储是用ThreadLocalMap实现的，每个Thread都会具有一个ThreadLocalMap。key是ThreadLocal，value是存放的对象。
+
 ## 锁
 ### 偏心锁
 ### 轻量级锁
