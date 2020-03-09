@@ -7,8 +7,8 @@ IntegerCache设置了一个缓存整数的数组，默认是-128 ~ 127。可以�
 ### 抽象类
 抽象类不能被实例化。抽象类的构造器不能用于创建实例，是仅提供给子类调用的。
 ### String和StringBuffer、StringBuilder的区别
-String是final的，不可变，不能被继承。
-会产生临时对象，执行效率低
+String是final的，不可变，不能被继承。会产生临时对象，执行效率低。
+
 StringBuffer的读写都用了synchroized修饰方法，线程安全的。StringBuilder不是。
 ### [需要同时重写equals和hashcode方法](../src/main/java/com.vaga.java.basic.EqualsAndHashCodeRewrite)
 ## 容器
@@ -31,9 +31,6 @@ StringBuffer的读写都用了synchroized修饰方法，线程安全的。String
 ### ConcurrentHashMap
 1. 线程安全 2. key和value不能是null 3. CAS和synchronize实现线程安全，也是数组+链表+红黑树
 ## [多线程](concurrent)
-### 进程和线程的区别
-进程是系统资源分配的最小单位，一个进程可以有多个线程组成。进程会有单独的内存空间，最大4G。
-### [多线程进阶](../src/main/java/com/java/concurrent/concurrent.md)
 
 ## [java8](java8)
 ## [jvm](jvm)
