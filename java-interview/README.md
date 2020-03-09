@@ -36,8 +36,10 @@ StringBuffer的读写都用了synchroized修饰方法，线程安全的。String
 ## [jvm](jvm)
 
 
-## 源码编程题
+## TODO列表
 - 设计一个迭代器，包含hasNext(),next(),remove()三个方法。注意多线程问题
+- 详细学习线程池及其使用
+
 
 参考资料:
 [面试指北](http://notfound9.github.io/interviewGuide/#/)
