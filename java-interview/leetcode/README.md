@@ -42,3 +42,9 @@
 ## 107,
 ## TODO [108. 将有序数组转换为二叉搜索树](../../src/main/java/com/vaga/java/leetcode/tree/SortedArrayToBSTTest.java)
 ## SQL: 182,183
+
+3.9
+## [172. 阶乘后的零]
+## [171. Excel表列序号]
+## [169. 多数元素]
+## SQL: 184,196,197
