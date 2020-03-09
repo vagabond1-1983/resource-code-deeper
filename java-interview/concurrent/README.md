@@ -50,6 +50,8 @@ ThreadLocal存储是用ThreadLocalMap实现的，每个Thread都会具有一个T
 
 ## 线程池
 用ThreadPoolExecutor创建，而不要用Executor创建。当达到设定的核心线程数，则其他的任务进入等待队列。等到队列中的任务都运行完成，再执行等待队列的任务。
+
+线程池详细内容请[移步](https://github.com/Snailclimb/JavaGuide/blob/master/docs/java/Multithread/java%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.md)
 ## 锁
 ## 乐观锁和悲观锁
 悲观锁：假定每次当数据被读取后都有可能修改，所以在使用数据前加锁。比方数据库的行锁和表锁，都是悲观锁，消耗性能较大。
