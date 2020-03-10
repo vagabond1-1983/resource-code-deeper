@@ -39,6 +39,7 @@
 ## [JConsole实验](../../src/main/java/com/vaga/java/jvm/jconsole/MonitoringTest.java)
 ## [visualvm - btrace](../../src/main/java/com/vaga/java/jvm/visualvm/btrace/BTraceTest.java)
 ## 类加载模型
+![类的生命周期图](https://camo.githubusercontent.com/68465e752e28fd5e7c6a6d442c19f05305c8f043/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d31312f2545372542312542422545352538412541302545382542442542442545382542462538372545372541382538422d2545352541452538432545352539362538342e706e67)
 - loadClass是java定义好的，findClass可重写
 - 双亲委派机制是父类先加载类，无法加载再由子类加载。顺序：
 BootStrap ClassLoader->Extension ClassLoader->Application ClassLoader->User ClassLoader
