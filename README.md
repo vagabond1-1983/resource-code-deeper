@@ -1,6 +1,7 @@
 # resource-code-deeper
 研究源码工程，先java、spring、tomcat
 ## [java](java-interview)
+## [redis](redis)
 ## spring
 ## spring解密
 ## springboot
