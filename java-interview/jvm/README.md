@@ -48,3 +48,4 @@ BootStrap ClassLoader->Extension ClassLoader->Application ClassLoader->User Clas
 - volatile：防止指令重排序
 - 线程实现可分为：系统线程、用户线程和用户线程加轻量级系统进程
 - 线程状态共有五种：启动、运行、等待、阻塞、终止。启动和终止是单向的，其他都是双向的。
+## TODO 深入理解jvm虚拟机 重读
