@@ -61,3 +61,9 @@
 ## [119. 杨辉三角II](../../src/main/java/com/vaga/java/leetcode/array/TriangleSec.java)
 ## [11.盛最多水的容器]
 ## [15.三数之和](../../src/main/java/com/vaga/java/leetcode/array/ThreeSum.java)
+
+3.12
+数组
+## [189.旋转数组]
+## [217,219 存在重复元素]
+## [18.四数之和]
