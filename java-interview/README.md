@@ -20,6 +20,7 @@ StringBuffer的读写都用了synchroized修饰方法，线程安全的。String
 所以用Iterator时，它的remove()方法是会更新expectedModCount值等于modCount的。所以不会出现问题。
 ### HashMap
 - 添加键值对的过程
+
 ![添加键值对流程图](http://notfound9.github.io/interviewGuide/static/2.png)
 一：tab为空直接resize，然后插入；
 二：hash值不同，直接插入；
