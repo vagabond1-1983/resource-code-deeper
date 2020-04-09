@@ -32,6 +32,7 @@ public class NoDuplicateLongestSubstringLength {
     @DataProvider(name = "data")
     public static Object[][] data() {
         return new Object[][]{
+                {"abcbcc", 3},
                 {"abcabcbb", 3},
                 {"bbbbb", 1},
                 {"pwwkew", 3}
@@ -59,11 +60,11 @@ public class NoDuplicateLongestSubstringLength {
         Set<Character> noDuplicateChars = new HashSet<>();
         int res = 0, i = 0, j = 0;
         while (i < s.length() && j < s.length()) {
-            if (!noDuplicateChars.contains(s.charAt(i))) {
-                noDuplicateChars.add(s.charAt(i++));
-                res = Math.max(res, i - j);
+            if (!noDuplicateChars.contains(s.charAt(j))) {
+                noDuplicateChars.add(s.charAt(j++));
+                res = Math.max(res, j - i);
             } else {
-                noDuplicateChars.remove(s.charAt(j++));
+                noDuplicateChars.remove(s.charAt(i++));
             }
         }
         return res;
